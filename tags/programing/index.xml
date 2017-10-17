@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programing on DeltaLab Works</title>
-    <link>https://sankaku-deltalab.github.io/DeltaLabWorks/tags/programing/</link>
+    <link>https://sankaku-deltalab.github.io/tags/programing/</link>
     <description>Recent content in Programing on DeltaLab Works</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
     <lastBuildDate>Sun, 18 Dec 2016 18:08:30 +0900</lastBuildDate>
     
-	<atom:link href="https://sankaku-deltalab.github.io/DeltaLabWorks/tags/programing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sankaku-deltalab.github.io/tags/programing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>偏差射撃アルゴリズム</title>
-      <link>https://sankaku-deltalab.github.io/DeltaLabWorks/post/programing/hensa_syageki/</link>
+      <link>https://sankaku-deltalab.github.io/post/programing/hensa_syageki/</link>
       <pubDate>Sun, 18 Dec 2016 18:08:30 +0900</pubDate>
       
-      <guid>https://sankaku-deltalab.github.io/DeltaLabWorks/post/programing/hensa_syageki/</guid>
+      <guid>https://sankaku-deltalab.github.io/post/programing/hensa_syageki/</guid>
       <description>偏差射撃の実装について 目標 自機が移動する的に当たる弾を発射するために、適切な発射方向を計算する。
 定義 太字の英数字はベクトル(e.g. $\mathbf{a}$).
 位置$A$と$B$があったとき、$AB$は$A$から$B$へのベクトル。

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ue4 on DeltaLab Works</title>
-    <link>https://sankaku-deltalab.github.io/DeltaLabWorks/tags/ue4/</link>
+    <link>https://sankaku-deltalab.github.io/tags/ue4/</link>
     <description>Recent content in Ue4 on DeltaLab Works</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
     <lastBuildDate>Tue, 30 May 2017 00:25:10 +0900</lastBuildDate>
     
-	<atom:link href="https://sankaku-deltalab.github.io/DeltaLabWorks/tags/ue4/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sankaku-deltalab.github.io/tags/ue4/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>UE4のButtonのOnHoveredが呼ばれない場合</title>
-      <link>https://sankaku-deltalab.github.io/DeltaLabWorks/post/ue4/mouse_not_hover/</link>
+      <link>https://sankaku-deltalab.github.io/post/ue4/mouse_not_hover/</link>
       <pubDate>Tue, 30 May 2017 00:25:10 +0900</pubDate>
       
-      <guid>https://sankaku-deltalab.github.io/DeltaLabWorks/post/ue4/mouse_not_hover/</guid>
+      <guid>https://sankaku-deltalab.github.io/post/ue4/mouse_not_hover/</guid>
       <description>UE4のWigetのButtonに、マウスカーソルが重なったときに呼ばれるOnHoveredのデリゲートがあるが、 これはPlayerController-&amp;gt;bShowMouseCursor=false になっていてマウスが隠れている場合呼ばれない。 Buttonの見た目も変わらない。</description>
     </item>
     
     <item>
       <title>UE4のWidgetの位置をc&#43;&#43;で取得する</title>
-      <link>https://sankaku-deltalab.github.io/DeltaLabWorks/post/ue4/ui1/</link>
+      <link>https://sankaku-deltalab.github.io/post/ue4/ui1/</link>
       <pubDate>Mon, 29 May 2017 23:53:36 +0900</pubDate>
       
-      <guid>https://sankaku-deltalab.github.io/DeltaLabWorks/post/ue4/ui1/</guid>
+      <guid>https://sankaku-deltalab.github.io/post/ue4/ui1/</guid>
       <description>FVector2D USTGBButton::GetSelectLocation_Implementation() const { const FTransform2D ButtonTrans_DisplaySpace = GetCachedGeometry().ToPaintGeometry().GetAccumulatedRenderTransform(); const FVector2D ButtonNW_DisplaySpace = ButtonTrans_DisplaySpace.GetTranslation(); const FTransform2D WindowTrans_DisplaySpace = OwnerWidget-&amp;gt;GetCachedGeometry().ToPaintGeometry().GetAccumulatedRenderTransform(); const FVector2D WindowNW_DisplaySpace = WindowTrans_DisplaySpace.GetTranslation(); const FVector2D ButtonNW_CanvasSpace = ButtonNW_DisplaySpace - WindowNW_DisplaySpace; const FVector2D ButtonSize = GetCachedGeometry().ToPaintGeometry().GetLocalSize() * ButtonTrans_DisplaySpace.GetMatrix().GetScale().GetVector(); return ButtonNW_CanvasSpace + ButtonSize/2; }  こんな感じで取得する。 マウス位置を取得するときはウィンドウ内の描画位置を基準とする空間なのに、 GetCachedGeometry().ToPaintGeometry().GetAccumulatedRenderTransform() で取得するウィジェット位置はディスプレイの描画位置を基準とする空間であることに注意。</description>
     </item>
     

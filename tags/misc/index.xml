@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Misc on DeltaLab Works</title>
-    <link>https://sankaku-deltalab.github.io/DeltaLabWorks/tags/misc/</link>
+    <link>https://sankaku-deltalab.github.io/tags/misc/</link>
     <description>Recent content in Misc on DeltaLab Works</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
     <lastBuildDate>Tue, 17 Oct 2017 01:44:28 +0900</lastBuildDate>
     
-	<atom:link href="https://sankaku-deltalab.github.io/DeltaLabWorks/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sankaku-deltalab.github.io/tags/misc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>再起動</title>
-      <link>https://sankaku-deltalab.github.io/DeltaLabWorks/post/misc/reboot/</link>
+      <link>https://sankaku-deltalab.github.io/post/misc/reboot/</link>
       <pubDate>Tue, 17 Oct 2017 01:44:28 +0900</pubDate>
       
-      <guid>https://sankaku-deltalab.github.io/DeltaLabWorks/post/misc/reboot/</guid>
+      <guid>https://sankaku-deltalab.github.io/post/misc/reboot/</guid>
       <description>作ったものをある程度きちんとした形で公開する気が出てきたので、いろいろ整備中。</description>
     </item>
     
