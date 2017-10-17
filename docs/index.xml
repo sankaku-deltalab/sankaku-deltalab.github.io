@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeltaLab Works</title>
+    <link>https://sankaku-deltalab.github.io/docs/</link>
+    <description>Recent content on DeltaLab Works</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 17 Oct 2017 01:44:28 +0900</lastBuildDate>
+    
+	<atom:link href="https://sankaku-deltalab.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>再起動</title>
+      <link>https://sankaku-deltalab.github.io/docs/post/misc/reboot/</link>
+      <pubDate>Tue, 17 Oct 2017 01:44:28 +0900</pubDate>
+      
+      <guid>https://sankaku-deltalab.github.io/docs/post/misc/reboot/</guid>
+      <description>作ったものをある程度きちんとした形で公開する気が出てきたので、いろいろ整備中。</description>
+    </item>
+    
+    <item>
+      <title>Works</title>
+      <link>https://sankaku-deltalab.github.io/docs/works/</link>
+      <pubDate>Tue, 17 Oct 2017 01:42:46 +0900</pubDate>
+      
+      <guid>https://sankaku-deltalab.github.io/docs/works/</guid>
+      <description> コンピュータゲーム シューティング  RankControl ランクを操作してスコアを稼ぐミニゲームSTG 泡んパチッ 狙い撃ちと打ち返しのミニゲームSTG Enemy50 自動生成した弾幕を用いるミニゲームSTG  フライトアクション  LightLineSnakes マクロス + スネークゲームのミニゲーム  プログラム  GunTree.ts 可読性が高く、拡張可能な弾幕記述手法  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://sankaku-deltalab.github.io/docs/about/</link>
+      <pubDate>Tue, 17 Oct 2017 01:32:56 +0900</pubDate>
+      
+      <guid>https://sankaku-deltalab.github.io/docs/about/</guid>
+      <description>DeltaLabは主にSTGを作るサークルです。
+DellaLab creates shmups mainly.</description>
+    </item>
+    
+    <item>
+      <title>UE4のButtonのOnHoveredが呼ばれない場合</title>
+      <link>https://sankaku-deltalab.github.io/docs/post/ue4/mouse_not_hover/</link>
+      <pubDate>Tue, 30 May 2017 00:25:10 +0900</pubDate>
+      
+      <guid>https://sankaku-deltalab.github.io/docs/post/ue4/mouse_not_hover/</guid>
+      <description>UE4のWigetのButtonに、マウスカーソルが重なったときに呼ばれるOnHoveredのデリゲートがあるが、 これはPlayerController-&amp;gt;bShowMouseCursor=false になっていてマウスが隠れている場合呼ばれない。 Buttonの見た目も変わらない。</description>
+    </item>
+    
+    <item>
+      <title>UE4のWidgetの位置をc&#43;&#43;で取得する</title>
+      <link>https://sankaku-deltalab.github.io/docs/post/ue4/ui1/</link>
+      <pubDate>Mon, 29 May 2017 23:53:36 +0900</pubDate>
+      
+      <guid>https://sankaku-deltalab.github.io/docs/post/ue4/ui1/</guid>
+      <description>FVector2D USTGBButton::GetSelectLocation_Implementation() const { const FTransform2D ButtonTrans_DisplaySpace = GetCachedGeometry().ToPaintGeometry().GetAccumulatedRenderTransform(); const FVector2D ButtonNW_DisplaySpace = ButtonTrans_DisplaySpace.GetTranslation(); const FTransform2D WindowTrans_DisplaySpace = OwnerWidget-&amp;gt;GetCachedGeometry().ToPaintGeometry().GetAccumulatedRenderTransform(); const FVector2D WindowNW_DisplaySpace = WindowTrans_DisplaySpace.GetTranslation(); const FVector2D ButtonNW_CanvasSpace = ButtonNW_DisplaySpace - WindowNW_DisplaySpace; const FVector2D ButtonSize = GetCachedGeometry().ToPaintGeometry().GetLocalSize() * ButtonTrans_DisplaySpace.GetMatrix().GetScale().GetVector(); return ButtonNW_CanvasSpace + ButtonSize/2; }  こんな感じで取得する。 マウス位置を取得するときはウィンドウ内の描画位置を基準とする空間なのに、 GetCachedGeometry().ToPaintGeometry().GetAccumulatedRenderTransform() で取得するウィジェット位置はディスプレイの描画位置を基準とする空間であることに注意。</description>
+    </item>
+    
+    <item>
+      <title>偏差射撃アルゴリズム</title>
+      <link>https://sankaku-deltalab.github.io/docs/post/programing/hensa_syageki/</link>
+      <pubDate>Sun, 18 Dec 2016 18:08:30 +0900</pubDate>
+      
+      <guid>https://sankaku-deltalab.github.io/docs/post/programing/hensa_syageki/</guid>
+      <description>偏差射撃の実装について 目標 自機が移動する的に当たる弾を発射するために、適切な発射方向を計算する。
+定義 太字の英数字はベクトル(e.g. $\mathbf{a}$).
+位置$A$と$B$があったとき、$AB$は$A$から$B$へのベクトル。
+$|\mathbf{a}|$はベクトル$\mathbf{a}$の長さ。
+設定 自機と的がある。
+自機は原点Oから弾速sの弾を発射し、 的は位置Lから速度$\mathbf{v}$で移動する。 $l := |OL|,$ $\theta :=$直線$OL$と$\mathbf{v}$の成す角度$(0 \le \theta \le 180[deg]).$
+結果 弾を発射してから着弾するまでの時間$t$について、 $$t = \frac{l}{\pm s\sqrt{1-(\frac{|\mathbf{v}|}{s} \sin \theta)^2} - |\mathbf{v}|\cos \theta}.$$ となる。
+$t \ge 0$のとき、弾が命中するときの的の位置は$L + \mathbf{v}t$であり、そこに向けて弾を撃てば命中する。
+$t$が求められない場合や$t$が負である場合、どの方向に弾を撃っても的に当たらない。
+計算 弾が発射され、時間$t$後に的に当たるときの位置を$P$とする。
+このとき、 $$|OP| = st, |LP| = |\mathbf{v}|t.$$
+$OL \perp PQ$となり、線分$OL$上にある位置$Q$を設定する。 $\angle POQ$の角度を$\theta&amp;rsquo;$とする。
+$O, Q, L$は直線状にあるので、 $$|OQ + LQ| = |OL|$$ $$&amp;lt;=&amp;gt;st\cos\theta&amp;rsquo; - |\mathbf{v}|t\cos\theta = l.$$
+また、 $$|PQ| = st\sin\theta&amp;rsquo; = |\mathbf{v}|t\sin\theta$$ $$&amp;lt;=&amp;gt; 1 - \cos^2\theta&amp;rsquo; = \left(\frac{|\mathbf{v}|}{s}\sin\theta\right)^2$$ $$&amp;lt;=&amp;gt; \cos\theta&amp;rsquo; = \pm\sqrt{1 - \left(\frac{|\mathbf{v}|}{s}\sin\theta\right)^2}.</description>
+    </item>
+    
+  </channel>
+</rss>
