@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programings on DeltaLab Works</title>
+    <link>http://localhost:1313/DeltaLabWorks/programing/</link>
+    <description>Recent content in Programings on DeltaLab Works</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 18 Dec 2016 18:08:30 +0900</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/DeltaLabWorks/programing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>偏差射撃アルゴリズム</title>
+      <link>http://localhost:1313/DeltaLabWorks/programing/hensa_syageki/</link>
+      <pubDate>Sun, 18 Dec 2016 18:08:30 +0900</pubDate>
+      
+      <guid>http://localhost:1313/DeltaLabWorks/programing/hensa_syageki/</guid>
+      <description>偏差射撃の実装について 目標 自機が移動する的に当たる弾を発射するために、適切な発射方向を計算する。
+定義 太字の英数字はベクトル(e.g. $\mathbf{a}$).
+位置$A$と$B$があったとき、$AB$は$A$から$B$へのベクトル。
+$|\mathbf{a}|$はベクトル$\mathbf{a}$の長さ。
+設定 自機と的がある。
+自機は原点Oから弾速sの弾を発射し、 的は位置Lから速度$\mathbf{v}$で移動する。 $|OL| = l,$ $\theta :=$直線$OL$と$\mathbf{v}$の成す角度$(0 \le \theta \le 180[deg]).$
+結果 弾を発射してから着弾するまでの時間$t$について、 $$t = \frac{l}{\pm s\sqrt{1-(\frac{|\mathbf{v}|}{s} \sin \theta)^2} - |\mathbf{v}|\cos \theta}.$$ となる。
+$t \ge 0$のとき、弾が命中するときの的の位置は$L + \mathbf{v}t$であり、そこに向けて弾を撃てば命中する。
+$t$が求められない場合や$t$が負である場合、どの方向に弾を撃っても的に当たらない。
+計算 弾が発射され、時間$t$後に的に当たるときの位置を$P$とする。
+このとき、 $$|OP| = st, |LP| = |\mathbf{v}|t.$$
+$OL \perp PQ$となり、線分$OL$上にある位置$Q$を設定する。 $\angle POQ$の角度を$\theta&amp;rsquo;$とする。
+$O, Q, L$は直線状にあるので、 $$|OQ + LQ| = |OL|$$ $$&amp;lt;=&amp;gt;st\cos\theta&amp;rsquo; - |\mathbf{v}|t\cos\theta = l.$$
+また、 $$|PQ| = st\sin\theta&amp;rsquo; = |\mathbf{v}|t\sin\theta$$ $$&amp;lt;=&amp;gt; 1 - \cos^2\theta&amp;rsquo; = \left(\frac{|\mathbf{v}|}{s}\sin\theta\right)^2$$ $$&amp;lt;=&amp;gt; \cos\theta&amp;rsquo; = \pm\sqrt{1 - \left(\frac{|\mathbf{v}|}{s}\sin\theta\right)^2}.</description>
+    </item>
+    
+  </channel>
+</rss>
